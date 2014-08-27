@@ -11,7 +11,8 @@
   </li>
 <% end %>
 
-<table style="border: 1px;">
+<table class="table table-hover">
+  <thead>
       <tr>
         <th>Title</th>
         <th>URL</th>
@@ -21,6 +22,8 @@
         <th>PostedAgo</th>
         <th>PostedBy</th>
       </tr>
+  </thead>
+     <tbody>
       <%@result_data.each do |item|%>
       <tr>
         <td><%=item["title"]%></td>
@@ -32,6 +35,7 @@
         <td><%=item["postedBy"]%></td>
       </tr>
      <%end%>
+     </tbody>
 </table>
 <%= paginate @result_data %>
 
